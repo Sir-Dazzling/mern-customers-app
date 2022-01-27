@@ -4,7 +4,10 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Customers from "./components/customers/Customers";
 import Navbar from "./components/layout/Navbar";
+import P from "./p";
 import AuthContext from "./context/AuthContext";
+
+ 
 
 function Router() {
   const { loggedIn } = useContext(AuthContext);
@@ -16,16 +19,17 @@ function Router() {
         <Route exact path="/">
           <div>Home</div>
         </Route>
-        {loggedIn === false && (
-          <>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-          </>
-        )}
+        
+        <Route path="/p">
+          <P />
+        </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+
         {loggedIn === true && (
           <>
             <Route path="/customer">

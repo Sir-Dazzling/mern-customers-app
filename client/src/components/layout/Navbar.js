@@ -7,7 +7,7 @@ function Navbar() {
   const { loggedIn } = useContext(AuthContext);
 
   return (
-    <div>
+    <div className="bg-red-600">
       <Link to="/">Home</Link>
       {loggedIn === false && (
         <>

@@ -7,10 +7,7 @@ function Customers() {
   const [customers, setCustomers] = useState([]);
 
   async function getCustomers() {
-    // const customersRes = await axios.get("http://localhost:5000/customer/");
-    const customersRes = await axios.get(
-      "https://mern-auth-template-tutorial.herokuapp.com/customer/"
-    );
+    const customersRes = await axios.get("http://localhost:5000/customer/");
     setCustomers(customersRes.data);
   }
 

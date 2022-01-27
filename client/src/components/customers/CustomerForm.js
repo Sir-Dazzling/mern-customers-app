@@ -11,11 +11,11 @@ function CustomerForm({ getCustomers }) {
       const customerData = {
         name: customerName,
       };
-      // await axios.post("http://localhost:5000/customer/", customerData);
-      await axios.post(
-        "https://mern-auth-template-tutorial.herokuapp.com/customer/",
-        customerData
-      );
+      await axios.post("http://localhost:5000/customer/", customerData);
+      // await axios.post(
+      //   "https://mern-auth-template-tutorial.herokuapp.com/customer/",
+      //   customerData
+      // );
       getCustomers();
     } catch (err) {
       console.error(err);

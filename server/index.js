@@ -16,10 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://mern-auth-template-tutorial.netlify.app",
-    ],
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
@@ -27,7 +24,7 @@ app.use(
 // connect to mongoDB
 
 mongoose.connect(
-  process.env.MDB_CONNECT,
+  "mongodb://localhost:27017/nnn",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
